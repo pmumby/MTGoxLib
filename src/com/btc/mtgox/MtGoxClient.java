@@ -40,4 +40,9 @@ public class MtGoxClient {
         return req.getResponse();
     }
     
+    public OrderResponse addOrder(CurrencyEnum currency, TradeTypeEnum type, double amount, double price) throws Exception
+    {
+        OrderRequest req = new OrderRequest(Conn, currency, type, amount, price);
+        return req.getResponse();
+    }
 }
