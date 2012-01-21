@@ -24,9 +24,9 @@ public class TradeRecord {
         switch(price_currency)
         {
             case BTC:
-                return (double)(price_int/10000000);                
+                return (double)((double)price_int/(double)10000000);                
             default:
-                return (double)(price_int/100000);                
+                return (double)((double)price_int/(double)100000);                
         }
     }
 
@@ -35,9 +35,9 @@ public class TradeRecord {
         switch(item)
         {
             case BTC:
-                return (double)(amount_int/10000000);                
+                return (double)((double)amount_int/(double)10000000);                
             default:
-                return (double)(amount_int/100000);                
+                return (double)((double)amount_int/(double)100000);                
         }
     }
 }

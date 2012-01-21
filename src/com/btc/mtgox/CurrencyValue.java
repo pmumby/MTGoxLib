@@ -18,9 +18,9 @@ public class CurrencyValue {
         switch(currency)
         {
             case BTC:
-                return (double)(value_int/10000000);                
+                return (double)((double)value_int/(double)10000000);                
             default:
-                return (double)(value_int/100000);                
+                return (double)((double)value_int/(double)100000);                
         }
     }
     
