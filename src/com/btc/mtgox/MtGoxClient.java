@@ -16,6 +16,12 @@ public class MtGoxClient {
         Conn = new APIConnection(protocol, host, key, secret);
     }
     
+    public TickerData getTicker(CurrencyEnum currency) throws Exception
+    {
+        TickerRequest req = new TickerRequest(Conn, currency);
+        return req.getResponse();
+    }
+    
     public DepthData getDepth(CurrencyEnum currency) throws Exception
     {
         DepthRequest req = new DepthRequest(Conn,currency);
