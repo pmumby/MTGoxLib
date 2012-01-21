@@ -23,4 +23,17 @@ public class CurrencyValue {
                 return (double)(value_int/100000);                
         }
     }
+    
+    public void setValue(double value)
+    {
+        switch(currency)
+        {
+            case BTC:
+                this.value_int = (long)(value*10000000);
+                break;
+            default:
+                this.value_int = (long)(value*100000);  
+                break;
+        }        
+    }
 }
