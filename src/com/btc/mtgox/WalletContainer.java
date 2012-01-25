@@ -12,4 +12,11 @@ public class WalletContainer {
     public Wallet BTC;
     public Wallet USD;
     public Wallet CAD;
+    
+    public WalletContainer()
+    {
+        BTC = new Wallet();
+        USD = new Wallet();
+        CAD = new Wallet();
+    }
 }

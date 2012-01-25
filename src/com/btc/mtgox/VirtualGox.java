@@ -13,10 +13,10 @@ public class VirtualGox extends MtGoxClient{
     
     public VirtualGox(String protocol, String host, String key, String secret)
     {
-        super(protocol,host,key,secret); 
-        VirtualWallet.BTC.Balance.setValue(100);
-        VirtualWallet.USD.Balance.setValue(100);
-        VirtualWallet.CAD.Balance.setValue(100);        
+        super(protocol,host,key,secret);         
+        VirtualWallet.BTC.Balance = new CurrencyValue(100, CurrencyEnum.BTC);
+        VirtualWallet.USD.Balance = new CurrencyValue(100, CurrencyEnum.USD);
+        VirtualWallet.CAD.Balance = new CurrencyValue(100, CurrencyEnum.CAD);    
     }
     
     @Override

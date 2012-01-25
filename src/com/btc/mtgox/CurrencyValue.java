@@ -13,6 +13,16 @@ public class CurrencyValue {
     public String display;
     public CurrencyEnum currency;
     
+    public CurrencyValue()
+    {
+    }
+    
+    public CurrencyValue(double Value, CurrencyEnum Currency)
+    {
+        currency = Currency;
+        setValue(Value);
+    }
+
     public double getValue()
     {
         switch(currency)
